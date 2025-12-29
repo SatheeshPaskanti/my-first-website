@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My First Azure Website</title>
+  <meta charset="UTF-8" />
+  <style>
+    body { 
+      font-family: Arial; 
+      background: #f5f5f5; 
+      text-align: center; 
+      padding-top: 60px;
+    }
+    .card {
+      background: white;
+      max-width: 450px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🚀 Hello from Azure!</h1>
+    <p>This is my first website hosted on Microsoft Azure.</p>
+  </div>
+</body>
+</html>
