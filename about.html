@@ -15,16 +15,38 @@
       box-shadow: 0 20px 40px rgba(0,0,0,.1);
       text-align: center;
     }
-    a { text-decoration:none; font-weight:bold; }
+    .navbar {
+      background: #4A148C;      /* Purple */
+      padding: 12px;
+      text-align: center;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
 <body>
+<header class="navbar">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
   <div class="card">
     <h1>👋 About This Website</h1>
     <p>This is a simple static website hosted on Microsoft Azure.</p>
-
-    <p><a href="index.html">⬅ Back to Home</a></p>
   </div>
+  
 </body>
 </html>
