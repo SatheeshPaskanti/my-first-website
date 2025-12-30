@@ -4,57 +4,61 @@
   <meta charset="UTF-8" />
   <title>Contact</title>
 
-  <style>
-    body { font-family: Arial; background:#f4f4f4; }
-    .card { 
-      max-width: 600px; 
-      margin: 80px auto; 
-      background: white; 
-      padding: 25px; 
-      border-radius: 12px; 
-      box-shadow: 0 20px 40px rgba(0,0,0,.1);
-      text-align: center;
-    }
-    .navbar {
-      background: #4A148C;      /* Purple */
-      padding: 12px;
-      text-align: center;
-    }
-
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-
-    .navbar a:hover {
-      text-decoration: underline;
-    }
-    .navbar a.active {
-      color: yellow;
-      text-decoration: underline;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-    }
-    button {
-      background: #4A148C;
-      color: white;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #6A1B9A;
-    }
 <style>
-    footer {
+body { font-family: Arial; background:#f4f4f4; }
+
+.card { 
+  max-width: 600px; 
+  margin: 80px auto; 
+  background: white; 
+  padding: 25px; 
+  border-radius: 12px; 
+  box-shadow: 0 20px 40px rgba(0,0,0,.1);
+  text-align: center;
+}
+
+.navbar {
+  background: #4A148C;
+  padding: 12px;
+  text-align: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.navbar a.active {
+  color: yellow;
+  text-decoration: underline;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+button {
+  background: #4A148C;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #6A1B9A;
+}
+
+footer {
   margin-top: 60px;
   background: #eeeeee;
   padding: 15px;
@@ -72,53 +76,56 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-
 </style>
 </head>
 
 <body>
+
 <header class="navbar">
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="contact.html" class="active" >Contact</a>
+    <a href="contact.html" class="active">Contact</a>
   </nav>
 </header>
 
-  <div class="card">
+<div class="card">
+
   <h1>📩 Contact Us</h1>
 
   <p>You can send me a message using this form 👇</p>
 
+  <form id="contactForm" action="https://formspree.io/f/xeeqdzzr" method="POST">
 
- <form id="ConcatForm" action="https://formspree.io/f/xeeqdzzr" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
 
-  <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
 
-  <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
 
-  <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
 
-  <button type="submit">Send</button>
+  </form>
 
-</form>
-<p id="successMessage" style="display:none; color:green; font-weight:bold;">
-  ✅ Message sent — I will get back to you soon!
-</p>
+  <p id="successMessage" style="display:none; color:green; font-weight:bold;">
+    ✅ Message sent — I will get back to you soon!
+  </p>
 
 </div>
-  <footer>
-    © 2025 My First Azure Website — Built with ❤️  
-    <br>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="contact.html">Contact</a>
- </footer>
-<script>
-  const form = document.getElementById("contactForm");
-  const successMsg = document.getElementById("successMessage");
 
-  form.addEventListener("submit", async (e) => {
+<footer>
+  © 2025 My First Azure Website — Built with ❤️  
+  <br>
+  <a href="index.html">Home</a> |
+  <a href="about.html">About</a> |
+  <a href="contact.html">Contact</a>
+</footer>
+
+<script>
+const form = document.getElementById("contactForm");
+const successMsg = document.getElementById("successMessage");
+
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const formData = new FormData(form);
