@@ -88,17 +88,21 @@ footer a:hover {
   <div class="card">
   <h1>📩 Contact Us</h1>
 
-  <p>This is just a demo page (not a real form yet 😉)</p>
+  <p>You can send me a message using this form 👇</p>
 
-  <form>
-    <input type="text" placeholder="Your Name" />
 
-    <input type="email" placeholder="Your Email" />
+ <form action="https://formspree.io/f/xeeqdzzr" method="POST">
 
-    <textarea placeholder="Your Message"></textarea>
+  <input type="text" name="name" placeholder="Your Name" required>
 
-    <button type="button">Send</button>
-  </form>
+  <input type="email" name="email" placeholder="Your Email" required>
+
+  <textarea name="message" placeholder="Your Message" required></textarea>
+
+  <button type="submit">Send</button>
+
+</form>
+
 </div>
   <footer>
     © 2025 My First Azure Website — Built with ❤️  
